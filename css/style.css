@@ -1,0 +1,308 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #2a2829;
+}
+
+@font-face {
+    font-family: JMHTypewriter;
+    src: url('../font/JMHTypewriter.ttf');
+}
+
+header {
+    height: 100px;
+    width: 900px;
+}
+
+img#imgMctIcon {
+    width: 140px;
+    margin: 8px 0 0 10px;
+    border: solid 5px white;
+    border-radius: 100px;
+}
+
+p#parMorseCodeTrainer {
+    font-family: JMHTypewriter;
+    margin: -105px 0 0 170px;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+section {
+    height: 600px;
+    width: 900px;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 5px 5px 0;
+}
+
+img#imgTelegraph {
+    margin-top: 382px;
+    user-select: none;
+}
+
+div#divMorseAlphabet {
+    position: absolute;
+    width: 300px;
+    height: 291px;
+    margin: 118px 0 0 580px;
+    background: url("../img/imgFrame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+img#morseAlphabet {
+    width: 275px;
+    margin: 18px 0 0 12px;
+}
+
+div.divTxa {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    background: url("../img/imgFrame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div#divInput {
+    margin: 120px 0 0 10px;
+}
+
+div#divOutput {
+    margin: 120px 0 0 295px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgrey;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey;
+}
+
+textarea {
+    font-family: JMHTypewriter;
+    font-size: 30px;
+    color: lightgray;
+    width: 223px;
+    height: 122px;
+    text-align: center;
+    text-transform: uppercase;
+    overflow-y: auto;
+    overflow-x: hidden;
+    resize: none;
+    background: #2a2829;
+    border-color: #2a2829;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #4b4246;
+}
+
+textarea#txaInput {
+    margin: 10px 0 0 10px;
+}
+
+textarea#txaOutput {
+    margin: 10px 0 0 10px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+button#btnPlayTextToMorse {
+    margin: 280px 0 0 430px;
+}
+
+button#btnStopTextToMorse {
+    margin: 280px 0 0 470px;
+}
+
+button#btnClearText {
+    margin: 280px 0 0 510px;
+}
+
+button#btnPlayMorseToText{
+    margin: 280px 0 0 185px;
+}
+
+button#btnClearMorse {
+    margin: 280px 0 0 225px;
+}
+
+img.imgOptions{
+    width: 30px;
+    margin: -1px 0px 0px -6px;
+}
+
+.options {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: #2a2829;
+    border: none;
+    border-radius: 5px;
+}
+
+.options:after {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    content: attr(data-tooltip);
+    padding: 6px 10px;
+    top: 2.8em;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2px);
+    background: #2a2829;
+    color: darkgray;
+    white-space: nowrap;
+    z-index: 2;
+    border-radius: 2px;
+    transition: opacity 0.2s cubic-bezier(.64,.09,.08,1), transform 0.2s cubic-bezier(.64,.09,.08,1);
+}
+
+.options:hover::after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.options:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px #2a2829;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transform: translateX(-50%) translateY(-2px);
+    top: 2.3em;
+    left: 50%;
+    transition: opacity 0.2s cubic-bezier(.64,.09,.08,1), transform 0.2s cubic-bezier(.64,.09,.08,1);
+    z-index: 3;
+}
+
+.options:hover::before {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+img#imgDoubt {
+    position: absolute;
+    width: 30px;
+    margin: 470px 0 0 300px;
+}
+
+img#imgDoubt:hover {
+    transform: scale(1.2);
+}
+
+img.lang {
+    position: absolute;
+    width: 30px;
+}
+
+img.lang:hover {
+    transform: scale(1.1);
+}
+
+img#imgBra {
+    margin: 10px 0 0 782px;
+}
+
+img#imgEua {
+    margin: 10px 0 0 820px;
+}
+
+img#imgSound {
+    position: absolute;
+    width: 33px;
+    margin: 8px 0 0 858px;
+}
+
+img#imgSound:hover {
+    transform: scale(1.1);
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: JMHTypewriter;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    text-align: center;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 12% 0 0 17%;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: darkgray;
+}

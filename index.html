@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Morse Code Trainer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="img/icoMorse.ico">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body onload="javascript:init()">
+        <header>
+            <a href="index.html"><img id="imgMctIcon" src="img/mctIcon.svg" alt="Morse Code Trainer Icon"></a>
+            <p id="parMorseCodeTrainer">MORSE CODE TRAINER</p>
+        </header>
+        <section class="secMorse">
+            <img id="imgSound" src="img/imgSoundOn.svg" alt="Sound image" onclick="javascript:soundControl()">
+            <img id="imgBra" class="lang" src="img/imgBra.svg" alt="Brasil image " onclick="javascript:changeLanguage('pt-br')">
+            <img id="imgEua" class="lang" src="img/imgEua.svg" alt="EUA image" onclick="javascript:changeLanguage('en-us')">
+            <div id="divInput" class="divTxa">
+                <textarea id="txaInput" name="txaInput" placeholder="Your morse code..." spellcheck="false" onkeypress="return /[. -]/.test(event.key)"></textarea>
+            </div>
+            <div id="divOutput" class="divTxa">
+                <textarea id="txaOutput" name="txaOutput" placeholder="Your text..." spellcheck="false" onkeypress="return /^[a-zA-Z 0-9]+$/.test(event.key)"></textarea>
+            </div>
+            <div id="divMorseAlphabet">
+                <img id="morseAlphabet" src="img/morseAlphabet.svg" alt="Morse alphabet">
+            </div>
+            <button id="btnPlayTextToMorse" class="options" onclick="javascript:playTextToMorse()">
+                <img id="imgPlayTextToMorse" class="imgOptions" src="img/imgPlay.png" alt="Play Text to Morse image">
+            </button>
+            <button id="btnStopTextToMorse" class="options" onclick="javascript:stopTextToMorse()">
+                <img id="imgStopTextToMorse" class="imgOptions" src="img/imgStop.png" alt="Stop Text to Morse image">
+            </button>
+            <button id="btnClearText" class="options" onclick="javascript:clearTextArea('txaOutput')">
+                <img id="imgClearText" class="imgOptions" src="img/imgEraser.png" alt="Clear Text">
+            </button>
+            <button id="btnPlayMorseToText" class="options" data-tooltip="Play Morse To Text" onclick="javascript:playMorseToText()">
+                <img id="imgPlayMorseToText" class="imgOptions" src="img/imgPlay.png" alt="Play Morse to Text image">
+            </button>
+            <button id="btnClearMorse" class="options" data-tooltip="Clear Morse" onclick="javascript:clearTextArea('txaInput')">
+                <img id="imgClearMorse" class="imgOptions" src="img/imgEraser.png" alt="Clear Morse">
+            </button>
+            <img id="imgTelegraph" src="img/imgTelegraphUp.png" alt="Telegraph icon" usemap="#knob">
+            <map name="knob">
+                <area shape="circle" coords="482,53,52" alt="Knob Area" target = "_self" onmousedown="javascript:keyDown(event)" onmouseup="javascript:keyUp(event)">
+            </map>
+            <a href="#openModal"><img id="imgDoubt" src="img/imgDoubt.gif" alt="Doubt image"></a>
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2 id="h2Instruction"></h2>
+                    <p id="p1Instruction"></p>
+                    <p id="p2Instruction"></p>
+                    <img id="knob" src="img/imgKnob.png" alt="Knob">
+                    <img id="spaceKey" src="img/imgSpacebar.png" alt="Space Key">
+                    <p id="p3Instruction"></p>
+                    <p id="p4Instruction"></p>
+                    <p id="p5Instruction"></p>
+                </div>
+            </div>
+        </section>
+        <script src="js/script.js"></script>
+    </body>
+</html>
