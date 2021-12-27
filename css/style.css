@@ -250,13 +250,12 @@ img#imgSound:hover {
     transform: scale(1.1);
 }
 
-.modalDialog {
+.doubtModal {
     position: fixed;
     font-family: JMHTypewriter;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    height: 700px;
+    width: 900px;
+    margin-top: -637px;
     background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
     opacity:0;
@@ -265,17 +264,18 @@ img#imgSound:hover {
     transition: opacity 400ms ease-in;
     pointer-events: none;
     text-align: center;
+    border-radius: 0 0 5px 0;
 }
 
-.modalDialog:target {
+.doubtModal:target {
     opacity:1;
     pointer-events: auto;
 }
 
-.modalDialog > div {
+.doubtModal > div {
     width: 400px;
     position: relative;
-    margin: 12% 0 0 17%;
+    margin: 15% 0 0 25%;
     padding: 5px 20px 13px 20px;
     border-radius: 10px;
     background: #fff;
